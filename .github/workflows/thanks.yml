@@ -39,7 +39,7 @@ jobs:
             console.log(comment.data);
             
             // auto label
-            github.rest.issues.addLabel({
+            github.rest.issues.addLabels({
               repo, owner, issue_number,
               labels: ['todo-review']
             });
