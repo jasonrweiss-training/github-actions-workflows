@@ -13,6 +13,7 @@ jobs:
   chat:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ github.event.comment.body }}
       - uses: ca-dp/code-butler@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
