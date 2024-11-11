@@ -9,6 +9,8 @@ on:
 jobs:
   thanks:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
 
     steps:
       - id: issue_script
@@ -48,4 +50,4 @@ jobs:
             return comment.data.id;
 
       - run:
-          echo "comment ID = ${{ steps.issue_script.outputs.result }}
+          echo "comment ID = ${{ steps.issue_script.outputs.result }}"
